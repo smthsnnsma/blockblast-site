@@ -3,15 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Block Blast Game</title>
+    <title>Block Blast Clone</title>
     <style>
         body { text-align: center; font-family: Arial, sans-serif; }
-        canvas { background: #eee; margin-top: 20px; }
+        #game-board {
+            width: 300px;
+            height: 400px;
+            background: #eee;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px auto;
+            border: 2px solid black;
+        }
+        .cell {
+            width: 30px;
+            height: 30px;
+            border: 1px solid gray;
+            box-sizing: border-box;
+        }
+        #block-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .block {
+            width: 30px;
+            height: 30px;
+            background: blue;
+            margin: 5px;
+            cursor: grab;
+        }
     </style>
 </head>
 <body>
-    <h1>Block Blast Game</h1>
-    <canvas id="gameCanvas" width="400" height="500"></canvas>
+    <h1>Block Blast Clone</h1>
+    <div id="game-board"></div>
+    <div id="block-container">
+        <div class="block" draggable="true"></div>
+        <div class="block" draggable="true"></div>
+        <div class="block" draggable="true"></div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
